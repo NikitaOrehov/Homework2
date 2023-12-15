@@ -112,9 +112,7 @@ void sort(struct person** library, int count){
 }
 
 void write_file(FILE* p_file, struct person** library, int count){
-    printf("whitefile\n");
     for (int i = 0; i < count; i++){
-        printf("111\n");
         if (library[i] == NULL) continue;
         fputs("name: ", p_file);
         fprintf(p_file, "%s\n", library[i]->name);
@@ -125,11 +123,9 @@ void write_file(FILE* p_file, struct person** library, int count){
         fputs("phonenumber: ", p_file);
         fprintf(p_file, "%s\n", library[i]->phonenumber);
         fputs("birthday: ", p_file);
-        fprintf(p_file, "%s.", library[i]->borndate.day);
-        fputs("name: ", p_file);
-        fprintf(p_file, "%s.", library[i]->borndate.month);
-        fputs("name: ", p_file);
-        fprintf(p_file, "%s\n", library[i]->borndate.year);
+        fprintf(p_file, "%d.", library[i]->borndate.day);
+        fprintf(p_file, "%d.", library[i]->borndate.month);
+        fprintf(p_file, "%d", library[i]->borndate.year);
         fputs("\n\n\n", p_file);
     }
 }
@@ -151,12 +147,13 @@ int main(){
             watch(library, number, count);
         }
         if (number == 4){
-            printf("exit program");
+            printf("\n\nexit program\n");
             break;
         }
         if (number == 5){
             sort(library, count);
         }
+        if (number > 5) break;
     }
     FILE* p_file = fopen("data.txt", "w");
     write_file(p_file, library, count);

@@ -2,6 +2,8 @@
 
 int main(){
     FILE* p_file = fopen("test.txt", "w");
-    fputs("ghgfjfjgfjfj", p_file);
+    for (int i = 0; i < 10; i++){
+        fputs("1 ", p_file);
+    }
     fclose(p_file);
 }

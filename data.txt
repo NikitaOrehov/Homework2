@@ -1,0 +1,21 @@
+name: wet
+surname: qwerq
+gender: 1
+phonenumber: ewtewret
+birthday: -1.-1.-1
+
+
+name: erytry
+surname: eryrey
+gender: 1
+phonenumber: urueueryu
+birthday: 13.13.31
+
+
+name: ruerureu
+surname: rureur
+gender: 1
+phonenumber: trutyutyu
+birthday: 2000.2000.2000
+
+
