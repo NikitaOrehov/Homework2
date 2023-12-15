@@ -123,7 +123,7 @@ void write_file(FILE* p_file, struct person** library, int count){
         fputs("phonenumber: ", p_file);
         fprintf(p_file, "%s\n", library[i]->phonenumber);
         fputs("birthday: ", p_file);
-        fprintf(p_file, "%d.", library[i]->borndate.day);
+        fprintf(p_file, "%d.", library[i]->borndate.day);//если было бы %s
         fprintf(p_file, "%d.", library[i]->borndate.month);
         fprintf(p_file, "%d", library[i]->borndate.year);
         fputs("\n\n\n", p_file);
